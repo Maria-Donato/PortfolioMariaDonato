@@ -1,8 +1,10 @@
 $color: #1e1e1e;
-$color1: #2F414F;
+$color1: #2f414f4a;
 $color2: #ffa500;
 $color3: #fff;
 $color4:#aab8c4;
+
+
 
 
 $font: 'Roboto',
@@ -10,8 +12,8 @@ sans-serif;
 $font2: 'Roboto Mono',
 monospace;
 
-$small: 400px;
-$medium: 700px;
+$small:700px;
+$medium: 989px;
 
 
 
@@ -45,16 +47,83 @@ section {
 
 header {
 
-    .top-nav-collapse{
-        background-color: $color !important;
+
+    .navbar>.container,
+    .navbar>.container-fluid,
+    .navbar>.container-lg,
+    .navbar>.container-md,
+    .navbar>.container-sm,
+    .navbar>.container-xl,
+    .navbar>.container-xxl {
+        background-color: $color;
+
+
+
     }
 
     nav {
-        background-color: $color;
-        height: 3rem;
+        background-color: $color !important;
         width: auto;
+        display: flex;
+        justify-content: space-between;
 
-        
+        .navbar-collapse {
+            flex-grow: 0;
+
+
+            @media (max-width:$small) {
+                line-height: .2rem;
+                margin: .1rem;
+                list-style: none;
+                justify-content: center;
+                align-items: center;
+
+
+            }
+
+            @media (max-width:$medium) {
+                background-color: $color;
+                border-radius: 1rem;
+                text-align: center;
+                width: 50%;
+                box-shadow: 10px 10px 126px 126px rgba(0, 0, 0, 0.75);
+                -webkit-box-shadow: 10px 10px 126px 126px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 10px 10px 126px 126px rgba(0, 0, 0, 0.75);
+
+
+
+            }
+
+            ul {
+
+                align-items: center;
+
+                @media (max-width:$medium) {
+                    display: flex;
+                    flex-direction: row;
+                    line-height: .2rem;
+                    margin: .1rem;
+                    list-style: none;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                @media (max-width:$small) {
+                    border: solid .1rem $color2;
+                    border-radius: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 0.2rem;
+                    margin: 0.1rem;
+                    list-style: none;
+                    align-items: center;
+                    align-content: flex-start;
+                }
+
+            }
+
+
+        }
 
 
         img {
@@ -84,17 +153,24 @@ header {
             &:hover {
                 opacity: 50%;
             }
+
+            @media (max-width:$medium) {
+                font-size: .9rem;
+                margin: 1.5rem;
+                color: $color3 !important;
+
+            }
+
         }
 
         .boton {
             font-family: $font2;
+            font-size: 0.8rem;
+            text-decoration: none;
             color: $color2;
             border: none;
             padding: 0.2rem;
             margin-left: 2rem;
-            color: $color2;
-            font-size: 0.8rem;
-            text-decoration: none;
             background-color: $color !important;
             background-image: linear-gradient(currentColor, currentColor);
             background-position: 0% 100%;
@@ -102,6 +178,12 @@ header {
             background-size: 0% 1px;
             transition: background-size .3s;
             margin-right: 2rem;
+
+            @media (max-width:$medium) {
+                color: $color2 !important;
+                font-size: 1rem;
+
+            }
 
 
             &:hover {
@@ -141,52 +223,43 @@ header {
 
     }
 
-
-    
-
-
     &::after {
         content: "";
         border: solid 0.01rem $color3;
         position: absolute;
         height: 14rem;
         width: 0.01rem;
-        margin: 7.5rem auto;
+        margin: 10.3rem auto;
 
 
     }
 
-    
-
-    a {
-        color: $color3;
-        
-        
-        &:hover {
-            color: $color2;
-        }
-    }
-
-    ul{
+    ul {
         list-style: none;
         padding: 0;
         margin: 0;
-        
-        
-        
-        
-    }
 
-    li:hover {
-        transform: translateY(1px);
-        color: $color2;
+        a {
+            color: $color3;
+            line-height: 2rem;
 
-    }
+            &:hover {
+                color: $color2;
+            }
+
+        }
+
+        li:hover {
+            transform: translateY(1px);
+            color: $color2;
+
+            @media (max-width:$small) {
+                display: none;
 
 
-    @media (max-width:$small) {
-        display: none;
+            }
 
+        }
 
     }
 
@@ -196,12 +269,18 @@ header {
 /*Section 1 - Presentacion*/
 
 .section-1 {
+    @media (max-width:$medium) {
+        margin-top: 12rem;
+
+
+    }
 
 
 
-    h3 {
+    p {
         font-size: 1rem;
         font-family: $font2;
+        font-weight: 100;
     }
 
     h1 {
@@ -215,11 +294,14 @@ header {
             font-size: 2rem;
             width: 100%;
 
+
         }
     }
 
-    h4 {
+    h2 {
         font-family: $font2;
+        font-weight: 100;
+        margin-bottom: 2.5rem;
 
 
         @media (max-width:$medium) {
@@ -233,10 +315,9 @@ header {
     }
 
     a {
-
         color: $color3;
         font-family: $font2;
-        margin-top: 1rem;
+        margin-top: 6rem;
         text-decoration: none;
         background-image: linear-gradient(currentColor, currentColor);
         background-position: 0% 100%;
@@ -248,8 +329,6 @@ header {
             border: $color2 solid 0.1rem;
             padding: 0.5rem;
             margin-bottom: 10rem;
-
-
 
         }
 
@@ -279,23 +358,30 @@ header {
         color: $color3;
         background-color: $color;
         border: none;
+        font-weight: 100;
+        letter-spacing: .1rem;
 
 
         @media (max-width:$small) {
             font-size: 0.9rem;
-            
+
 
         }
 
         @media (max-width:$medium) {
             font-size: 0.9rem;
             width: 100%;
-            
+
 
 
         }
 
-       
+        strong {
+            color: $color2;
+
+        }
+
+
 
         h3 {
             color: $color2;
@@ -305,27 +391,28 @@ header {
         }
 
         img {
-            border: solid 0.1rem $color2;
-            opacity: 50%;
-            margin-top: 3.4rem;
-            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-            -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+            margin-top: 2.3rem;
+            border-bottom: 0.1rem solid rgba(47, 65, 79, 0.29);
+            border-right: 0.1rem solid $color1;
 
-            &:hover {
-                opacity: 100%;
-                transform: translate(1px);
+            @media (max-width:$medium) {
+                margin-top: 0;
+
+
+
             }
+
+
         }
 
-        .text-muted{
+        .text-muted {
             color: $color4 !important;
         }
 
     }
 }
 
-/*Section 3 - donde trabaje*/
+/*Section 3 - TRABAJOS DESTACADOS*/
 
 .section-3 {
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.07);
@@ -336,9 +423,10 @@ header {
         color: $color2;
         font-family: $font2;
         font-size: 1rem;
-        border-bottom: solid $color1 0.01rem;
         text-align: center;
         margin-bottom: 2rem;
+        border-bottom: solid $color1 0.01rem;
+        padding: 0.5rem;
 
 
 
@@ -346,12 +434,13 @@ header {
     }
 
     a {
-        color: $color2;
-        padding: 20px;
+        color: $color3;
+        padding: 1rem;
+        text-decoration: none;
         width: 10rem;
 
         &:hover {
-            color: $color3;
+            color: $color2;
             background-color: $color;
 
         }
@@ -364,6 +453,17 @@ header {
 
         }
 
+        &.link_txt {
+            color: $color3;
+            padding: 0;
+
+            &:hover {
+                color: $color2;
+                background-color: $color;
+
+            }
+
+        }
 
 
 
@@ -371,8 +471,21 @@ header {
 
     .nav-pills .nav-link.active,
     .nav-pills .show>.nav-link {
-        color: #fff;
-        background-color: $color1;
+        color: $color2;
+        background-color: $color;
+
+
+    }
+
+    .tab-pane {
+        font-weight: 100;
+        margin-top: 3rem;
+        letter-spacing: .1rem;
+
+        @media (max-width:$medium) {
+            margin-top: 1rem;
+
+        }
 
 
     }
@@ -383,6 +496,10 @@ header {
 
 .section-4 {
 
+
+    h4 {
+        color: $color2;
+    }
 
 
     h3 {
@@ -397,13 +514,14 @@ header {
     }
 
     .card {
-        background-color: #202d39;
-        margin: 1rem;
-        transition: transform 800ms;
+        background-color: $color;
         will-change: transform;
-        box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.33);
-        -webkit-box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.33);
-        -moz-box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.33);
+        font-weight: 100;
+        box-shadow: rgba(0, 0, 0, 0.33) 10px 10px 5px -1px;
+        margin: 1rem;
+        transition: transform 800ms ease 0s;
+        position: relative;
+
 
         &:hover {
             transform: translateY(1rem);
@@ -411,9 +529,9 @@ header {
         }
 
         img {
+            width: 60%;
             filter: saturate(0%);
-            -webkit-filter: saturate(0%);
-            -moz-filter: saturate(0%);
+            margin-left: 20%;
 
             &:hover {
                 filter: saturate(100%);
@@ -422,8 +540,10 @@ header {
             }
         }
 
-        .text-muted{
-            color: $color4 !important;
+        .text-muted {
+            color: $color2 !important;
+            font-family: $font2;
+            font-weight: 500;
         }
 
 
@@ -454,6 +574,8 @@ header {
 
     p {
         text-align: center;
+        letter-spacing: .1rem;
+        font-weight: 100;
         font-size: 1rem;
         margin-top: 1rem;
 
@@ -492,23 +614,25 @@ header {
 /*Footer*/
 
 footer {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-weight: 100;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
     margin-bottom: 5rem;
 
     @media (max-width:$small) {
-        font-size: 0.5rem;
+        font-size: 0.9rem;
 
 
     }
 
     @media (max-width:$medium) {
-        font-size: 0.5rem;
-        width: 100%;
+        font-size: 0.9rem;
+        align-content: center;
 
 
     }
+
 
     .redesFooter {
         text-decoration: none;
@@ -516,8 +640,16 @@ footer {
         display: none;
 
 
+        @media (max-width:$medium) {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            align-items: center;
+            margin: 5rem;
+            padding-right: 15rem;
+            padding-left: 15rem;
 
-
+        }
 
 
         @media (max-width:$small) {
@@ -530,26 +662,18 @@ footer {
 
         }
 
-        @media (max-width:$medium) {
-            display: flex;
-            justify-content: space-between;
-            padding: 2rem;
-            align-items: center;
-            margin: 5rem;
-
-        }
-
         a {
             color: $color2;
-
-
 
             &:hover {
                 transform: translateY(1px);
                 color: $color2;
 
             }
+
+
         }
+
 
 
 

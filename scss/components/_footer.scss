@@ -1,0 +1,68 @@
+@import "base/variables";
+
+footer {
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 5rem;
+
+    @media (max-width:$small) {
+        font-size: 0.9rem;
+
+
+    }
+
+    @media (max-width:$medium) {
+        font-size: 0.9rem;
+        width: 100%;
+
+
+    }
+
+    .redesFooter {
+        text-decoration: none;
+        list-style: none;
+        display: none;
+
+
+
+
+
+
+        @media (max-width:$small) {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            align-items: center;
+            margin: 5rem;
+
+
+        }
+
+        @media (max-width:$medium) {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            align-items: center;
+            margin: 5rem;
+
+        }
+
+        a {
+            color: $color2;
+
+
+
+            &:hover {
+                transform: translateY(1px);
+                color: $color2;
+
+            }
+        }
+
+
+
+    }
+
+
+}
