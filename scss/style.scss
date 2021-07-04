@@ -27,6 +27,8 @@ body {
 section {
     margin: 12rem;
 
+
+
     @media (max-width:$small) {
         margin: 0rem;
 
@@ -47,7 +49,6 @@ section {
 
 header {
 
-
     .navbar>.container,
     .navbar>.container-fluid,
     .navbar>.container-lg,
@@ -60,6 +61,7 @@ header {
 
 
     }
+
 
     nav {
         background-color: $color !important;
@@ -118,6 +120,7 @@ header {
                     list-style: none;
                     align-items: center;
                     align-content: flex-start;
+
                 }
 
             }
@@ -163,11 +166,12 @@ header {
 
         }
 
+
         .boton {
             font-family: $font2;
             font-size: 0.8rem;
             text-decoration: none;
-            color: $color2;
+            color: $color4;
             border: none;
             padding: 0.2rem;
             margin-left: 2rem;
@@ -178,6 +182,8 @@ header {
             background-size: 0% 1px;
             transition: background-size .3s;
             margin-right: 2rem;
+
+
 
             @media (max-width:$medium) {
                 color: $color2 !important;
@@ -191,6 +197,7 @@ header {
                 color: #fff;
                 background-size: 100% 2px;
             }
+
 
         }
 
@@ -227,7 +234,7 @@ header {
         content: "";
         border: solid 0.01rem $color3;
         position: absolute;
-        height: 14rem;
+        height: 25rem;
         width: 0.01rem;
         margin: 10.3rem auto;
 
@@ -352,6 +359,8 @@ header {
 
 .section-2 {
     margin-top: 2rem;
+    padding-top: 5rem;
+
 
 
     .card {
@@ -415,6 +424,7 @@ header {
 /*Section 3 - TRABAJOS DESTACADOS*/
 
 .section-3 {
+    padding-top: 5rem;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.07);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.07);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.07);
@@ -433,7 +443,7 @@ header {
 
     }
 
-    a {
+    .s4Color {
         color: $color3;
         padding: 1rem;
         text-decoration: none;
@@ -453,15 +463,18 @@ header {
 
         }
 
-        &.link_txt {
-            color: $color3;
-            padding: 0;
+    }
 
-            &:hover {
-                color: $color2;
-                background-color: $color;
+    .link_txt {
+        color: $color3;
+        text-decoration: none;
+        width: 10rem;
 
-            }
+        &:hover {
+            color: $color2;
+            background-color: $color;
+
+
 
         }
 
@@ -516,6 +529,7 @@ header {
     .card {
         background-color: $color;
         will-change: transform;
+        border: 0rem;
         font-weight: 100;
         box-shadow: rgba(0, 0, 0, 0.33) 10px 10px 5px -1px;
         margin: 1rem;
@@ -532,6 +546,7 @@ header {
             width: 60%;
             filter: saturate(0%);
             margin-left: 20%;
+
 
             &:hover {
                 filter: saturate(100%);
@@ -639,10 +654,21 @@ footer {
         list-style: none;
         display: none;
 
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+
+                margin: 1rem;
+            }
+
+        }
+
 
         @media (max-width:$medium) {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             padding: 2rem;
             align-items: center;
             margin: 5rem;
@@ -654,10 +680,12 @@ footer {
 
         @media (max-width:$small) {
             display: flex;
-            justify-content: space-between;
-            padding: 2rem;
+            justify-content: space-around;
+            padding: 1rem;
             align-items: center;
-            margin: 5rem;
+            padding-right: 1rem;
+            padding-left: 1rem;
+
 
 
         }
@@ -679,5 +707,85 @@ footer {
 
     }
 
+}
+
+/*404 */
+
+.section-404 {
+    
+    .conteinerTres {
+        display: flex;
+        justify-content: center;
+        margin: 2rem;
+        
+        
+        
+        .engranaje-1 {
+            height: 5rem;
+            transition: width 2s, height 2s, transform 10s;
+
+            &:hover {
+                transform: rotate(680deg);
+
+            }
+
+        }
+
+        .engranaje-2 {
+            height: 10rem;
+
+            transition: width 2s, height 2s, transform 10s;
+
+            &:hover {
+                transform: rotate(580deg);
+
+            }
+
+        }
+
+        .txt-404 {
+            justify-content: center;
+           
+            h1 {
+                font-size: 10rem;
+                color: $color2;
+                margin-bottom: 1rem;
+            }
+
+            a{
+            
+            font-size: 1rem;
+            text-decoration: none;
+            color: $color4;
+            border: none;
+            padding: 0.2rem;
+            background-color: $color !important;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 1px;
+            transition: background-size .3s;
+            margin-right: 2rem;
+
+
+
+            @media (max-width:$medium) {
+                color: $color2 !important;
+                font-size: 1rem;
+
+            }
+
+
+            &:hover {
+                background-color: $color;
+                color: #fff;
+                background-size: 100% 2px;
+            }
+
+
+        }
+
+        }
+    }
 
 }
